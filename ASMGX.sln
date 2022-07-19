@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASMGX.DeepMed.WebApp.API", "ASMGX.DeepMed.WebApp.API\ASMGX.DeepMed.WebApp.API.csproj", "{AFDA738C-134F-4EC3-BAA3-48A004938C2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASMGX.DeepMed.Infrastructure", "ASMGX.DeepMed.Infrastructure\ASMGX.DeepMed.Infrastructure.csproj", "{62EAB604-F264-4F89-B860-71914ED446EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASMGX.DeepMed.Business", "ASMGX.DeepMed.Business\ASMGX.DeepMed.Business.csproj", "{BE2F7F1A-3B60-4AED-8F10-503BBC97249E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASMGX.DeepMed.Application", "ASMGX.DeepMed.Application\ASMGX.DeepMed.Application.csproj", "{73D32211-ADFF-408F-BCAA-F23BE169943B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASMGX.DeepMed.Shared", "ASMGX.DeepMed.Shared\ASMGX.DeepMed.Shared.csproj", "{B1F39188-95F4-4A16-948B-2906FBBED1A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASMGX.DeepMed.Model", "ASMGX.DeepMed.Model\ASMGX.DeepMed.Model.csproj", "{B02F6A81-6A2A-48A8-8398-0D33D30A53C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFDA738C-134F-4EC3-BAA3-48A004938C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFDA738C-134F-4EC3-BAA3-48A004938C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFDA738C-134F-4EC3-BAA3-48A004938C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFDA738C-134F-4EC3-BAA3-48A004938C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62EAB604-F264-4F89-B860-71914ED446EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62EAB604-F264-4F89-B860-71914ED446EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62EAB604-F264-4F89-B860-71914ED446EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62EAB604-F264-4F89-B860-71914ED446EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE2F7F1A-3B60-4AED-8F10-503BBC97249E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE2F7F1A-3B60-4AED-8F10-503BBC97249E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE2F7F1A-3B60-4AED-8F10-503BBC97249E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE2F7F1A-3B60-4AED-8F10-503BBC97249E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73D32211-ADFF-408F-BCAA-F23BE169943B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73D32211-ADFF-408F-BCAA-F23BE169943B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73D32211-ADFF-408F-BCAA-F23BE169943B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73D32211-ADFF-408F-BCAA-F23BE169943B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1F39188-95F4-4A16-948B-2906FBBED1A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1F39188-95F4-4A16-948B-2906FBBED1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1F39188-95F4-4A16-948B-2906FBBED1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1F39188-95F4-4A16-948B-2906FBBED1A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B02F6A81-6A2A-48A8-8398-0D33D30A53C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B02F6A81-6A2A-48A8-8398-0D33D30A53C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B02F6A81-6A2A-48A8-8398-0D33D30A53C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B02F6A81-6A2A-48A8-8398-0D33D30A53C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A5AEE2D-DAE7-4240-A517-810213B5485C}
+	EndGlobalSection
+EndGlobal
