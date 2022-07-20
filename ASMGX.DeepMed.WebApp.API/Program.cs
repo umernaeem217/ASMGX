@@ -1,4 +1,12 @@
+using ASMGX.DeepMed.Application;
+using ASMGX.DeepMed.Business;
 using ASMGX.DeepMed.Infrastructure;
+using ASMGX.DeepMed.Mapping;
+using ASMGX.DeepMed.Shared.Hashing.Concrete;
+using ASMGX.DeepMed.Shared.Hashing.Interfaces;
+using ASMGX.DeepMed.Shared.Hashing.Models;
+using ASMGX.DeepMed.WebApp.API.Middlewares;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,15 +17,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Custom Validation Middleware
+builder.Services.AddValidationMiddleware();
 
-//Configuration Builder
-var config = new ConfigurationBuilder()
-                 .SetBasePath(Directory.GetCurrentDirectory())
-                 .AddJsonFile("appsettings.json")
-                 .Build();
+//Custom Options
+builder.Services.Configure<HashingOptions>(
+    builder.Configuration.GetSection("HashingOptions"));
+
 
 //Custom Services
-builder.Services.AddInfrastructure(config);
+builder.Services.AddTransient<IPasswordHasher, PasswordHasher>();
+builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddRepositories();
+builder.Services.AddManagers();
+builder.Services.AddAutoMapper();
 
 var app = builder.Build();
 
@@ -27,6 +40,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+//Custom Exception Middleware
+app.UseCustomExceptionMiddleware();
 
 app.UseHttpsRedirection();
 

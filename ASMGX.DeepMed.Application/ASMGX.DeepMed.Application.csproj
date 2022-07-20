@@ -10,4 +10,8 @@
     <ProjectReference Include="..\ASMGX.DeepMed.Infrastructure\ASMGX.DeepMed.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Authentication\" />
+  </ItemGroup>
+
 </Project>
