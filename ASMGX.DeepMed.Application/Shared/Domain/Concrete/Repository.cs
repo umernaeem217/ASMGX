@@ -1,14 +1,15 @@
 ﻿using ASMGX.DeepMed.Application.Shared.Domain.Interfaces;
 using ASMGX.DeepMed.Infrastructure.Contexts;
 using ASMGX.DeepMed.Shared.EntityFramework.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace ASMGX.DeepMed.Application.Shared.Domain.Concrete
 {
-    public class Repository<T> : IRepository<T> where T : class, IBaseEntity
+    public class Repository<T> : ReadOnlyRepository<T>, IRepository<T> where T : class, IBaseEntity
     {
         private readonly ApplicationDbContext _context;
-        public Repository(ApplicationDbContext context)
+        public Repository(ApplicationDbContext context):base(context)
         {
             _context = context;
         }
@@ -33,29 +34,14 @@ namespace ASMGX.DeepMed.Application.Shared.Domain.Concrete
             await _context.Set<T>().AddRangeAsync(entities);
         }
 
-        public IQueryable<T> Find(Expression<Func<T, bool>> expression)
+        public void Edit(T entity)
         {
-            return _context.Set<T>().Where(expression);
+            _context.Set<T>().Update(entity);
         }
 
-        public IEnumerable<T> GetAll()
+        public void EditRange(IEnumerable<T> entities)
         {
-            return _context.Set<T>().ToList();
-        }
-
-        public Task<IEnumerable<T>> GetAllAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public T? GetById(int id)
-        {
-            return _context.Set<T>().Find(id);
-        }
-
-        public async Task<T?> GetByIdAsync(int id)
-        {
-            return await _context.Set<T>().FindAsync(id);
+            _context.Set<T>().UpdateRange(entities);
         }
 
         public void Remove(T entity)
@@ -66,16 +52,6 @@ namespace ASMGX.DeepMed.Application.Shared.Domain.Concrete
         public void RemoveRange(IEnumerable<T> entities)
         {
             _context.Set<T>().RemoveRange(entities);
-        }
-
-        public void SaveChanges()
-        {
-            _context.SaveChanges();
-        }
-
-        public async Task SaveChangesAsync()
-        {
-            await _context.SaveChangesAsync();
         }
     }
 }

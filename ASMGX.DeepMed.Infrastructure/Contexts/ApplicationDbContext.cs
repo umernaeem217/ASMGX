@@ -1,4 +1,6 @@
-﻿using ASMGX.DeepMed.Infrastructure.Models;
+﻿using ASMGX.DeepMed.Infrastructure.Models.Authentication;
+using ASMGX.DeepMed.Infrastructure.Models.General;
+using ASMGX.DeepMed.Infrastructure.Models.Subscription;
 using ASMGX.DeepMed.Shared.EntityFramework.Interfaces;
 using ASMGX.DeepMed.Shared.Helpers.EntityFramework;
 using Microsoft.EntityFrameworkCore;
@@ -77,5 +79,8 @@ namespace ASMGX.DeepMed.Infrastructure.Contexts
 
         //Database DbSets
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<VerificationCode> VerificationCodes { get; set; }
+        public virtual DbSet<Lookup> Lookups { get; set; }
+        public virtual DbSet<Plan> Plans { get; set; }
     }
 }

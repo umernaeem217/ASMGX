@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ASMGX.DeepMed.Infrastructure\ASMGX.DeepMed.Infrastructure.csproj" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Authentication\" />
+    <ProjectReference Include="..\ASMGX.DeepMed.Infrastructure\ASMGX.DeepMed.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

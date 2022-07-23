@@ -4,7 +4,9 @@ namespace ASMGX.DeepMed.Business.Authentication
 {
     public interface IAuthManager
     {
-        public Task<string> Signup(SignupDto signupDto);
-        public Task Login(LoginDto loginDto);
+        Task<string> Signup(SignupDto signupDto);
+        Task<LoginResponseDto> Login(LoginDto loginDto);
+        Task RequestVerificationCode(string userId, string email = "", string name = "");
+        Task<bool> VerifyCode(VerifyCodeDto verifyCodeDto);
     }
 }

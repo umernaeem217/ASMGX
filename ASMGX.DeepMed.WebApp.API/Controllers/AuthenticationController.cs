@@ -23,10 +23,22 @@ namespace ASMGX.DeepMed.WebApp.API.Controllers
         }
 
         [HttpPost("Login")]
-        public async Task<ActionResult<Response<bool>>> Login(LoginDto loginDto)
+        public async Task<ActionResult<Response<LoginResponseDto>>> Login(LoginDto loginDto)
         {
-            await _authManager.Login(loginDto);
-            return Ok(new Response<bool>(true, message: "User authenticated Successfully."));
+            return Ok(new Response<LoginResponseDto>(await _authManager.Login(loginDto), message: "User authenticated successfully."));
+        }
+
+        [HttpPost("Verify")]
+        public async Task<ActionResult<Response<bool>>> Verify(VerifyCodeDto verifyCodeDto)
+        {
+            return Ok(new Response<bool>(await _authManager.VerifyCode(verifyCodeDto), message: "User verified successfully."));
+        }
+
+        [HttpGet("RequestCode/{id}")]
+        public async Task<ActionResult<Response<string>>> RequestCode(string id)
+        {
+            await _authManager.RequestVerificationCode(id);
+            return Ok(new Response<string>(message: "Code sent successfully."));
         }
     }
 }

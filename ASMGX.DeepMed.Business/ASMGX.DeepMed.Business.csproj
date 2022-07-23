@@ -7,9 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ASMGX.DeepMed.Application\ASMGX.DeepMed.Application.csproj" />
     <ProjectReference Include="..\ASMGX.DeepMed.Mapping\ASMGX.DeepMed.Mapping.csproj" />
     <ProjectReference Include="..\ASMGX.DeepMed.Model\ASMGX.DeepMed.Model.csproj" />
+    <ProjectReference Include="..\ASMGX.Utilities.SMTP\ASMGX.Utilities.SMTP.csproj" />
   </ItemGroup>
 
 </Project>

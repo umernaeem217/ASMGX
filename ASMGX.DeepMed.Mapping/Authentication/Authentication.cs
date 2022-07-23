@@ -1,4 +1,4 @@
-﻿using ASMGX.DeepMed.Infrastructure.Models;
+﻿using ASMGX.DeepMed.Infrastructure.Models.Authentication;
 using ASMGX.DeepMed.Model.Authentication;
 using AutoMapper;
 

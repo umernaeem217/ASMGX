@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASMGX.DeepMed.Model", "ASMG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASMGX.DeepMed.Mapping", "ASMGX.DeepMed.Mapping\ASMGX.DeepMed.Mapping.csproj", "{EF32E919-3285-41D9-8D77-5D853B9F2BF7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supporting", "Supporting", "{899B29DC-D85D-4B4A-8DC6-19816E5AA245}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASMGX.Utilities.SMTP", "ASMGX.Utilities.SMTP\ASMGX.Utilities.SMTP.csproj", "{595550E9-75AA-4EC7-A289-E9577BA5718C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,9 +55,16 @@ Global
 		{EF32E919-3285-41D9-8D77-5D853B9F2BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF32E919-3285-41D9-8D77-5D853B9F2BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF32E919-3285-41D9-8D77-5D853B9F2BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{595550E9-75AA-4EC7-A289-E9577BA5718C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595550E9-75AA-4EC7-A289-E9577BA5718C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595550E9-75AA-4EC7-A289-E9577BA5718C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595550E9-75AA-4EC7-A289-E9577BA5718C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{595550E9-75AA-4EC7-A289-E9577BA5718C} = {899B29DC-D85D-4B4A-8DC6-19816E5AA245}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A5AEE2D-DAE7-4240-A517-810213B5485C}
